@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RecLora - Home</title>
-    <!-- Link to your external stylesheet -->
+    <!-- Import standard chunky, bold sans-serif font family -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Fredoka:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="reclora-body-wrapper">
@@ -12,13 +15,15 @@
     <!-- SIDEBAR NAVIGATION -->
     <nav class="rec-sidebar">
         <!-- Sidebar Logo Placeholder -->
-        <img class="rec-sidebar-logo" src="your-sidebar-logo-here.png" alt="RecLora Logo Placeholder" onerror="this.style.display='none'; this.after('REC LORA')">
+        <div class="rec-sidebar-logo-container">
+            <img class="rec-sidebar-logo" src="your-sidebar-logo-here.png" alt="RecLora Logo" onerror="this.style.display='none'; this.after('REC LORA')">
+        </div>
         
         <a href="#" class="rec-btn-download">Download</a>
         <a href="#" class="rec-btn-music">🎵 Music</a>
         
         <ul class="rec-nav-links">
-            <li><a href="#">🏠 Home</a></li>
+            <li><a href="#" class="active">🏠 Home</a></li>
             <li><a href="#">📺 RecTube</a></li>
             <li><a href="#">🛒 Shop</a></li>
             <li><a href="#">👥 Users</a></li>
@@ -32,62 +37,87 @@
     <!-- MAIN CONTENT AREA -->
     <main class="rec-main-content">
         
-        <!-- HERO BANNER -->
+        <!-- HERO BANNER SECTION -->
         <section class="rec-hero">
-            <!-- Main Hero Logo Placeholder -->
-            <img class="rec-main-logo" src="your-main-logo-here.png" alt="RecLora Big Logo Placeholder" onerror="this.style.display='none'; this.after('REC LORA')">
+            <!-- Navigation Hamburger & Search Icons inside Hero Area -->
+            <div class="rec-hero-header">
+                <button class="rec-menu-toggle" aria-label="Toggle Menu">☰</button>
+                <button class="rec-search-toggle" aria-label="Search">🔍</button>
+            </div>
+
+            <!-- Main Logo Placeholder -->
+            <div class="rec-logo-container">
+                <img class="rec-main-logo" src="your-main-logo-here.png" alt="RecLora Logo" onerror="this.style.display='none'; this.after('REC LORA')">
+            </div>
             
-            <h1>Join the fun for free!</h1>
+            <h1 class="rec-hero-title">Join the fun for free!</h1>
             <a href="#" class="rec-btn-download-hero">Download</a>
         </section>
 
-        <!-- MEDIA CONTENT GRID -->
+        <!-- 2x2 MEDIA CONTENT GRID -->
         <section class="rec-grid-container">
             
             <!-- Card 1 -->
             <div class="rec-grid-card">
-                <img class="rec-media-placeholder" src="feature1.png" alt="Cross-Platform Gameplay Placeholder">
-                <h3>Cross-Platform</h3>
+                <div class="rec-media-frame">
+                    <img class="rec-media-img" src="cross-platform.png" alt="Cross-Platform" onerror="this.src='https://placeholder.com'">
+                </div>
+                <h3 class="rec-card-title">Cross-Platform</h3>
             </div>
 
             <!-- Card 2 -->
             <div class="rec-grid-card">
-                <img class="rec-media-placeholder" src="feature2.png" alt="Create Mode Placeholder">
-                <h3>Create</h3>
+                <div class="rec-media-frame">
+                    <img class="rec-media-img" src="create.png" alt="Create" onerror="this.src='https://placeholder.com'">
+                </div>
+                <h3 class="rec-card-title">Create</h3>
             </div>
 
             <!-- Card 3 -->
             <div class="rec-grid-card">
-                <img class="rec-media-placeholder" src="feature3.png" alt="Compete Gameplay Placeholder">
-                <h3>Compete</h3>
+                <div class="rec-media-frame">
+                    <img class="rec-media-img" src="compete.png" alt="Compete" onerror="this.src='https://placeholder.com'">
+                </div>
+                <h3 class="rec-card-title">Compete</h3>
             </div>
 
             <!-- Card 4 -->
             <div class="rec-grid-card">
-                <img class="rec-media-placeholder" src="feature4.png" alt="Cooperate Gameplay Placeholder">
-                <h3>Cooperate</h3>
+                <div class="rec-media-frame">
+                    <img class="rec-media-img" src="cooperate.png" alt="Cooperate" onerror="this.src='https://placeholder.com'">
+                </div>
+                <h3 class="rec-card-title">Cooperate</h3>
             </div>
 
         </section>
 
-        <!-- COMMUNITY SECTION -->
-        <section class="rec-community-section">
-            <h2>Join Our Community</h2>
+        <!-- FOOTER COMMUNITY SECTION -->
+        <footer class="rec-community-section">
+            <h2 class="rec-section-title">Join Our Community</h2>
             
-            <!-- Discord Widget Mockup -->
+            <!-- Discord Live Widget Mockup -->
             <div class="rec-discord-widget">
                 <div class="rec-discord-header">
-                    <span class="rec-discord-logo-placeholder">Discord</span>
+                    <div class="rec-discord-brand">
+                        <span class="rec-discord-icon">🎮</span> Discord
+                    </div>
                     <span class="rec-discord-users">203 Members Online</span>
                 </div>
-                <div class="rec-discord-channels">
-                    <div>🔊 Stage</div>
-                    <div>👤 user_example_1</div>
-                    <div>👤 user_example_2</div>
-                    <div>💬 Talk</div>
+                <div class="rec-discord-body">
+                    <div class="rec-channel-group">🔊 Stage</div>
+                    <ul class="rec-user-list">
+                        <li><span class="rec-status-dot"></span> Uzi/Frutiger</li>
+                        <li><span class="rec-status-dot"></span> green man</li>
+                        <li><span class="rec-status-dot"></span> Remora</li>
+                        <li><span class="rec-status-dot"></span> theFNAFguy</li>
+                    </ul>
+                    <div class="rec-channel-group">💬 Talk</div>
                 </div>
             </div>
-        </section>
+            
+            <!-- Absolute Floating Bottom Action Button -->
+            <a href="#" class="rec-floating-action-btn">📥 Download RecClub</a>
+        </footer>
 
     </main>
 
